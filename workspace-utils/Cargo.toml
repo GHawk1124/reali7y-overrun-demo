@@ -1,0 +1,15 @@
+[package]
+name = "workspace-utils"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+cargo_metadata = "0.19.1"
+
+[[bin]]
+name = "list_crates"
+path = "src/bin/list_crates.rs"
+
+[[bin]]
+name = "run_flow"
+path = "src/bin/run_flow.rs"

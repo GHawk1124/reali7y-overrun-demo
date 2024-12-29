@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "workspace-utils",
+    "ro-dispatcher",
+    "ro-client",
+    "ro-chat",
+    "ro-inventory",
+]

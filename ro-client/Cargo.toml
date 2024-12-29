@@ -1,0 +1,39 @@
+[package]
+name = "ro-client"
+version = "0.1.0"
+edition = "2018"
+
+[features]
+default = ["wasm"]
+wasm = ["tiled/wasm"]
+
+[dependencies]
+tiled = { version = "0.13.0" }
+bevy_ecs_tilemap = "0.15"
+# bevy_ecs_tiled = { version = "0.5.0", features = ["wasm"] }
+thiserror = "2.0.9"
+bevy_asset_loader = "0.22.0"
+bevy-inspector-egui = { version = "0.28.0", default-features = false, features = ["bevy_pbr",
+    "bevy_image",
+    "bevy_render",
+    "egui_open_url",] }
+
+[dependencies.bevy]
+version = "0.15"
+default-features = false
+features = [
+    "bevy_core_pipeline",
+    "bevy_render",
+    "bevy_asset",
+    "png",
+    "ktx2",
+    "bevy_winit",
+    "bevy_window",
+    "bevy_text",
+    "bevy_sprite",
+    "bevy_ui",
+    "multi_threaded",
+    "default_font",
+    "webgl2",
+    "default_font",
+]

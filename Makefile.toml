@@ -1,0 +1,45 @@
+[env]
+CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = true
+
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+[tasks.list-crates]
+workspace = false
+description = "List all crates in the workspace"
+command = "cargo"
+args = ["run", "--bin", "list_crates"]
+cwd = "../workspace-utils"
+
+[tasks.build-dispatcher]
+workspace = false
+description = "Build dispatcher"
+command = "cargo"
+args = ["build", "--package", "ro-dispatcher"]
+
+[tasks.run-dispatcher]
+workspace = false
+description = "Run dispatcher"
+command = "cargo"
+args = ["run", "--package", "ro-dispatcher"]
+
+[tasks.build-client]
+workspace = false
+description = "Build client"
+command = "cargo"
+args = ["build", "--package", "ro-client"]
+
+[tasks.run-client]
+workspace = false
+description = "run client"
+command = "cargo"
+args = ["run", "--package", "ro-client"]
+
+[tasks.flow]
+workspace = false
+description = "Build and run dispatcher and client"
+command = "cargo"
+args = ["run", "--bin", "run_flow"]
+cwd = "workspace-utils"
